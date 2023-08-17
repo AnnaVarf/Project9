@@ -55,4 +55,21 @@ public class MovieManagerTest {
 
     }
 
+    @Test
+    public void movieAddTest4() {
+        MovieManager manager = new MovieManager();
+
+        manager.addMovie("Film I");
+        manager.addMovie("Film II");
+        manager.addMovie("Film III");
+        manager.addMovie("Film IV");
+        manager.addMovie("Film V");
+
+        String[] actual = manager.findLast();
+        String[] expected = { "Film V", "Film IV", "Film III", "Film II", "Film I" };
+
+        Assertions.assertArrayEquals(expected, actual);
+
+    }
+
 }
