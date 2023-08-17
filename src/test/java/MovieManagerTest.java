@@ -17,10 +17,10 @@ public class MovieManagerTest {
     public void movieAddTest1() {
         MovieManager manager = new MovieManager();
 
-        manager.addMovie("Film 1");
+        manager.addMovie("Film I");
 
         String[] actual = manager.findAll();
-        String[] expected = { "Film 1" };
+        String[] expected = { "Film I" };
         Assertions.assertArrayEquals(expected, actual);
 
     }
@@ -29,12 +29,12 @@ public class MovieManagerTest {
     public void movieAddTest2() {
         MovieManager manager = new MovieManager();
 
-        manager.addMovie("Film 1");
-        manager.addMovie("Film 2");
-        manager.addMovie("Film 3");
+        manager.addMovie("Film I");
+        manager.addMovie("Film II");
+        manager.addMovie("Film III");
 
         String[] actual = manager.findAll();
-        String[] expected = { "Film 1", "Film 2", "Film 3" };
+        String[] expected = { "Film I", "Film II", "Film III" };
 
         Assertions.assertArrayEquals(expected, actual);
 
@@ -44,12 +44,12 @@ public class MovieManagerTest {
     public void movieAddTest3() {
         MovieManager manager = new MovieManager();
 
-        manager.addMovie("Film 1");
-        manager.addMovie("Film 2");
-        manager.addMovie("Film 3");
+        manager.addMovie("Film I");
+        manager.addMovie("Film II");
+        manager.addMovie("Film III");
 
         String[] actual = manager.findLast();
-        String[] expected = { "Film 3", "Film 2", "Film 1" };
+        String[] expected = { "Film III", "Film II", "Film I" };
 
         Assertions.assertArrayEquals(expected, actual);
 
